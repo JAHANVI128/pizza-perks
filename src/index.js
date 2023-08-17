@@ -42,9 +42,30 @@ const pizzaData = [{
   soldOut: true
 }]
 
+function Header() {
+  return <h1>PIZZA PERKS CO.</h1>
+}
+
+function Menu() {
+  return <div>
+    <h2>Our Menu</h2>
+    <Pizza />
+  </div>
+}
+
+function Footer() {
+
+  const hour = new Date().getHours();
+  console.log(hour);
+
+  return <footer> {new Date().toLocaleTimeString()} We are currently open!!</footer>
+
+  // return React.createElement('footer',null,"We are currently open!!")
+}
+
 function Pizza() {
   return <div>
-    <img src="imgs/prosciutto.jpg" alt='prosciutto'/>
+    <img src="imgs/prosciutto.jpg" alt='prosciutto' />
     <h2>Pizza Prosciutto</h2>
     <p>Prosciutto, Italian sausage, onions, bacon, pepperoni</p>
   </div>
@@ -54,7 +75,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
-    <Pizza/>
+    <Header />
+    <Menu />
+    <Footer />
   </React.StrictMode>
 );
 
