@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+// import App from './App';
 import reportWebVitals from './reportWebVitals';
+import "./index.css";
 
 const pizzaData = [{
   name: "Focaccia",
@@ -42,22 +43,65 @@ const pizzaData = [{
   soldOut: true
 }]
 
+function App(){
+  return(
+    <div className='container'>
+      <Header/>
+      <Menu/>
+      <Footer/>
+    </div>
+  )
+}
+
 function Header() {
-  return <h1>PIZZA PERKS CO.</h1>
+
+  // const style = {
+  //   color : "tomato",
+  //   fontSize: "50px",
+  //   textAlign:"center",
+  //   textTransform:"uppercase"
+  // }
+
+  const style = {};
+
+  return (
+    <header className='header'>
+       <h1 style={style
+        // {
+        //   color : "tomato",
+        //   fontSize: "50px",
+        //   textAlign:"center",
+        //   textTransform:"uppercase"
+        // }
+      }>PIZZA PERKS CO.</h1> 
+    </header>
+  );
 }
 
 function Menu() {
-  return <div>
-    <h2>Our Menu</h2>
-    <Pizza />
-  </div>
+  return (
+    <div className='menu'>
+      <h2>Our Menu</h2>
+      <Pizza />
+    </div>
+  );
 }
 
 function Footer() {
 
   const hour = new Date().getHours();
-  console.log(hour);
+  // console.log(hour);
 
+  let openhr = 12;
+  let closehr = 22;
+  let isOpen = hour >= openhr && hour <= closehr;
+
+  console.log(isOpen);
+  // if(hour >= openhr && hour <= closehr){
+  //   alert("We are currently open !!!");
+  // }else{
+  //   alert("We are currently closed for the day !!!");
+  // }
   return <footer> {new Date().toLocaleTimeString()} We are currently open!!</footer>
 
   // return React.createElement('footer',null,"We are currently open!!")
@@ -74,10 +118,10 @@ function Pizza() {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
-    <Header />
+    <App />
+    {/* <Header />
     <Menu />
-    <Footer />
+    <Footer /> */}
   </React.StrictMode>
 );
 
