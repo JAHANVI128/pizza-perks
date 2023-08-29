@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/pizza-perks/static/css/main.5c62d482.css",
-    "main.js": "/pizza-perks/static/js/main.5f0257e3.js",
+    "main.js": "/pizza-perks/static/js/main.1c8c9de6.js",
     "static/js/787.6b31d402.chunk.js": "/pizza-perks/static/js/787.6b31d402.chunk.js",
     "index.html": "/pizza-perks/index.html",
     "main.5c62d482.css.map": "/pizza-perks/static/css/main.5c62d482.css.map",
-    "main.5f0257e3.js.map": "/pizza-perks/static/js/main.5f0257e3.js.map",
+    "main.1c8c9de6.js.map": "/pizza-perks/static/js/main.1c8c9de6.js.map",
     "787.6b31d402.chunk.js.map": "/pizza-perks/static/js/787.6b31d402.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5c62d482.css",
-    "static/js/main.5f0257e3.js"
+    "static/js/main.1c8c9de6.js"
   ]
 }
